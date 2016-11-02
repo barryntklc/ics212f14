@@ -1,0 +1,203 @@
+Last login: Fri Nov  7 23:12:13 on ttys002
+Chunmeista:~ Chunmeista$ /Users/Chunmeista/CPrograms/ICS212/UHUNIX.command ; exit;
+Unauthorized access is prohibited by law in accordance with Chapter 708, 
+Hawaii Revised Statutes; all use is subject to University of Hawaii 
+Executive Policy E2.210.
+Last login: Fri Nov  7 23:12:15 2014 from cpe-66-91-125-9
+
+Welcome to uhunix.hawaii.edu
+========================================================================
+Unauthorized access is prohibited by law in accordance with Chapter 708,
+Hawaii Revised Statutes; all use is subject to University of Hawaii
+Executive Policy E2.210.
+========================================================================
+
+ANNOUNCEMENTS:
+
+For Current Status and Alerts, see http://www.hawaii.edu/technews/
+
+
+bash-3.2$ cd ICS212/A07/a07b
+bash-3.2$ ls
+a.out          header.h       test1.bin.txt  test.bin
+final          notes.txt      test2.bin      test.bin.txt
+header.c       test1.bin      test2.bin.txt
+bash-3.2$ cd final
+bash-3.2$ ls
+a07b                  TCPEdit               test_new.bin
+header.c              test1.bin             test_new_new.bin
+header.h              test2.bin             test_new_new_new.bin
+makefile              test.bin
+bash-3.2$ rm a07b TCPEdit
+bash-3.2$ ls
+header.c              test1.bin             test_new.bin
+header.h              test2.bin             test_new_new.bin
+makefile              test.bin              test_new_new_new.bin
+bash-3.2$ make
+gcc -o TCPEdit header.c
+header.c:308:2: warning: no newline at end of file
+bash-3.2$ ls
+header.c              test1.bin             test_new_new.bin
+header.h              test2.bin             test_new_new_new.bin
+makefile              test.bin
+TCPEdit               test_new.bin
+bash-3.2$ rm test_new.bin test_new_new.bin test_new_new_new.bin
+bash-3.2$ ls
+header.c   makefile   test1.bin  test.bin
+header.h   TCPEdit    test2.bin
+bash-3.2$ ./TCPEdit
+usage:  ./TCPEdit <file path>
+
+bash-3.2$ ./TCPEdit askldjash wqkehqwkjeh
+usage:  ./TCPEdit <file path>
+
+bash-3.2$ ./TCPEdit askldjash
+Searching for file "askldjash".
+
+[ERROR]: File not found.
+
+bash-3.2$ ./TCPEdit test1.bin
+Searching for file "test1.bin".
+
+[HEADER CONTENTS]:
+Source Port: 43
+Destination Port: 4095
+Sequence Number: 4294901760
+Acknowledgement Number: 402653183
+Data Offset: 0
+Reserved: 63
+Control Bits:
+		URG: 1
+		ACK: 1
+		PSH: 1
+		RST: 1
+		SYN: 1
+		FIN: 1
+Window: 0
+Checksum: 255
+Urgent Pointer: 0
+
+[CHANGES APPLIED]:
+Source Port: 4095
+Destination Port: 43
+Sequence Number: 4294901761
+Acknowledgement Number: 4294901760
+Data Offset: 5
+Reserved: 0
+Control Bits:
+		URG: 1
+		ACK: 1
+		PSH: 1
+		RST: 1
+		SYN: 1
+		FIN: 1
+Window: 0
+Checksum: 65535
+Urgent Pointer: 0
+
+bash-3.2$ ls
+header.c        makefile        test1.bin       test2.bin
+header.h        TCPEdit         test1_new.bin?  test.bin
+bash-3.2$ ./TCPEdit test.bin
+Searching for file "test.bin".
+
+[HEADER CONTENTS]:
+Source Port: 23
+Destination Port: 65535
+Sequence Number: 4294901764
+Acknowledgement Number: 4294901763
+Data Offset: 5
+Reserved: 0
+Control Bits:
+		URG: 1
+		ACK: 1
+		PSH: 1
+		RST: 1
+		SYN: 1
+		FIN: 1
+Window: 0
+Checksum: 65535
+Urgent Pointer: 0
+
+[CHANGES APPLIED]:
+Source Port: 65535
+Destination Port: 23
+Sequence Number: 4294901765
+Acknowledgement Number: 4294901764
+Data Offset: 5
+Reserved: 0
+Control Bits:
+		URG: 1
+		ACK: 1
+		PSH: 1
+		RST: 1
+		SYN: 1
+		FIN: 1
+Window: 0
+Checksum: 65535
+Urgent Pointer: 0
+
+bash-3.2$ ls
+header.c        TCPEdit         test2.bin
+header.h        test1.bin       test.bin
+makefile        test1_new.bin?  test_new.bin??
+bash-3.2$ ./TCPEdit test2.bin
+Searching for file "test2.bin".
+
+[HEADER CONTENTS]:
+Source Port: 21
+Destination Port: 8001
+Sequence Number: 50002
+Acknowledgement Number: 50001
+Data Offset: 5
+Reserved: 0
+Control Bits:
+		URG: 0
+		ACK: 1
+		PSH: 1
+		RST: 1
+		SYN: 1
+		FIN: 0
+Window: 0
+Checksum: 65535
+Urgent Pointer: 0
+
+[CHANGES APPLIED]:
+Source Port: 8001
+Destination Port: 21
+Sequence Number: 50003
+Acknowledgement Number: 50002
+Data Offset: 5
+Reserved: 0
+Control Bits:
+		URG: 0
+		ACK: 1
+		PSH: 1
+		RST: 1
+		SYN: 1
+		FIN: 0
+Window: 0
+Checksum: 65535
+Urgent Pointer: 0
+
+bash-3.2$ ls
+header.c        TCPEdit         test2.bin       test_new.bin??
+header.h        test1.bin       test2_new.bin?
+makefile        test1_new.bin?  test.bin
+bash-3.2$ od -x test1_new.bin
+od: cannot open test1_new.bin: No such file or directory
+bash-3.2$ od -x test1_new.bin?
+0000000 0fff 002b ffff 0001 ffff 0000 503f 0000
+0000020 ffff 0000
+0000024
+bash-3.2$ od -x test_new.bin??
+0000000 ffff 0017 ffff 0005 ffff 0004 503f 0000
+0000020 ffff 0000
+0000024
+bash-3.2$ od -x test2_new.bin??
+od: cannot open test2_new.bin??: No such file or directory
+bash-3.2$ od -x test2_new.bin?
+0000000 1f41 0015 0000 c353 0000 c352 501e 0000
+0000020 ffff 0000
+0000024
+bash-3.2$ 
