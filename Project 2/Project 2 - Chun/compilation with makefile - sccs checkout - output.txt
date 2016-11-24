@@ -1,0 +1,1192 @@
+Last login: Thu Nov 27 23:26:50 on ttys002
+Chunmeista:~ Chunmeista$ cd ~/CPrograms
+Chunmeista:CPrograms Chunmeista$ ssh uh
+Unauthorized access is prohibited by law in accordance with Chapter 708, 
+Hawaii Revised Statutes; all use is subject to University of Hawaii 
+Executive Policy E2.210.
+Last login: Thu Nov 27 23:33:19 2014 from cpe-66-91-125-9
+
+Welcome to uhunix.hawaii.edu
+========================================================================
+Unauthorized access is prohibited by law in accordance with Chapter 708,
+Hawaii Revised Statutes; all use is subject to University of Hawaii
+Executive Policy E2.210.
+========================================================================
+
+ANNOUNCEMENTS:
+
+For Current Status and Alerts, see http://www.hawaii.edu/technews/
+
+
+bash-3.2$ cd ICS212/"Project 2"
+bash-3.2$ ls
+ABook      ABook.cpp  llist.cpp  llist.h    makefile   record.h
+bash-3.2$ make clean
+rm -f ABook
+rm -f save.txt
+bash-3.2$ ls
+ABook.cpp  llist.cpp  llist.h    makefile   record.h
+bash-3.2$ make
+g++ -ansi -Wall -o ABook ABook.cpp llist.cpp
+bash-3.2$ ls
+ABook      ABook.cpp  llist.cpp  llist.h    makefile   record.h
+bash-3.2$ sccs create ABook.cpp llist.cpp llist.h record.h makefile
+
+ABook.cpp:
+No id keywords (cm7)
+
+llist.cpp:
+No id keywords (cm7)
+
+llist.h:
+No id keywords (cm7)
+
+record.h:
+No id keywords (cm7)
+
+makefile:
+No id keywords (cm7)
+1.1
+634 lines
+No id keywords (cm7)
+1.1
+786 lines
+No id keywords (cm7)
+1.1
+50 lines
+No id keywords (cm7)
+1.1
+26 lines
+No id keywords (cm7)
+1.1
+8 lines
+No id keywords (cm7)
+bash-3.2$ ls
+ABook       ABook.cpp   llist.cpp   llist.h     makefile    record.h
+,ABook.cpp  ,llist.cpp  ,llist.h    ,makefile   ,record.h   SCCS
+bash-3.2$ vi getrelease.sh
+"getrelease.sh" [New file] 
+sccs get ABook.cpp llist.cpp llist.h record.h makefile
+
+make
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+"getrelease.sh" [New file] 3 lines, 61 characters 
+bash-3.2$ ls
+ABook          getrelease.sh  ,llist.h       makefile       SCCS
+,ABook.cpp     ,llist.cpp     llist.h        ,record.h
+ABook.cpp      llist.cpp      ,makefile      record.h
+bash-3.2$ ./getrelease.sh
+bash: ./getrelease.sh: Permission denied
+bash-3.2$ getrelease.sh
+bash: getrelease.sh: command not found
+bash-3.2$ sh getrelease.sh
+
+SCCS/s.ABook.cpp:
+1.1
+634 lines
+No id keywords (cm7)
+
+SCCS/s.llist.cpp:
+1.1
+786 lines
+No id keywords (cm7)
+
+SCCS/s.llist.h:
+1.1
+50 lines
+No id keywords (cm7)
+
+SCCS/s.record.h:
+1.1
+26 lines
+No id keywords (cm7)
+
+SCCS/s.makefile:
+1.1
+8 lines
+No id keywords (cm7)
+g++ -ansi -Wall -o ABook ABook.cpp llist.cpp
+bash-3.2$ ls
+ABook          getrelease.sh  ,llist.h       makefile       SCCS
+,ABook.cpp     ,llist.cpp     llist.h        ,record.h
+ABook.cpp      llist.cpp      ,makefile      record.h
+bash-3.2$ ./ABook
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Welcome!
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Adding new contact...]----------------------------------------------------
+Enter NAME: 
+: a
+Enter ADDRESS (press enter twice to continue): 
+: a
+: 
+Enter BIRTH YEAR: 
+: 1
+Enter PHONE #: 
+: a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Contact added.
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Adding new contact...]----------------------------------------------------
+Enter NAME: 
+: b
+Enter ADDRESS (press enter twice to continue): 
+: b
+: 
+Enter BIRTH YEAR: 
+: 2
+Enter PHONE #: 
+: b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Contact added.
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Editing a contact...]-----------------------------------------------------
+Enter NAME: 
+: c
+Enter ADDRESS (press enter twice to continue): 
+: c
+: c
+: 3
+: 
+Enter PHONE #: 
+: 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+No matching contacts found, no contacts edited.
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Listing all contacts...]--------------------------------------------------
+
+(> a <)
+[Address]
+a
+[Birth Year]
+1
+[Phone #]
+a
+
+(> b <)
+[Address]
+b
+[Birth Year]
+2
+[Phone #]
+b
+
+---------------------------------------------------------------------------
+[Press enter to return to the main menu...]--------------------------------
+: ^?1
+: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Adding new contact...]----------------------------------------------------
+Enter NAME: 
+: c
+Enter ADDRESS (press enter twice to continue): 
+: c
+: 
+Enter BIRTH YEAR: 
+: 3
+Enter PHONE #: 
+: c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Contact added.
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Adding new contact...]----------------------------------------------------
+Enter NAME: 
+: a
+Enter ADDRESS (press enter twice to continue): 
+: a
+: a
+: a
+: 1
+: 
+Enter BIRTH YEAR: 
+: 1
+Enter PHONE #: 
+: a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Contact added.
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Listing all contacts...]--------------------------------------------------
+
+(> a <)
+[Address]
+a
+[Birth Year]
+1
+[Phone #]
+a
+
+(> b <)
+[Address]
+b
+[Birth Year]
+2
+[Phone #]
+b
+
+(> c <)
+[Address]
+c
+[Birth Year]
+3
+[Phone #]
+c
+
+(> a <)
+[Address]
+a
+a
+a
+1
+[Birth Year]
+1
+[Phone #]
+a
+
+---------------------------------------------------------------------------
+[Press enter to return to the main menu...]--------------------------------
+: 
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Looking for a contact...]-------------------------------------------------
+Enter NAME to search for: a
+[Listing matching contacts...]---------------------------------------------
+
+(> a <)
+[Address]
+a
+[Birth Year]
+1
+[Phone #]
+a
+
+(> a <)
+[Address]
+a
+a
+a
+1
+[Birth Year]
+1
+[Phone #]
+a
+
+---------------------------------------------------------------------------
+2 matching contact(s) found.
+[Press enter to return to the main menu...]--------------------------------
+: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Saving contacts to save.txt...
+Save complete.
+bash-3.2$ ./ABook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Welcome!
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Listing all contacts...]--------------------------------------------------
+
+(> a <)
+[Address]
+a
+[Birth Year]
+1
+[Phone #]
+a
+
+(> b <)
+[Address]
+b
+[Birth Year]
+2
+[Phone #]
+b
+
+(> c <)
+[Address]
+c
+[Birth Year]
+3
+[Phone #]
+c
+
+(> a <)
+[Address]
+a
+a
+a
+1
+[Birth Year]
+1
+[Phone #]
+a
+
+---------------------------------------------------------------------------
+[Press enter to return to the main menu...]--------------------------------
+: 
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+Contact list reversed.
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Listing all contacts...]--------------------------------------------------
+
+(> a <)
+[Address]
+a
+a
+a
+1
+[Birth Year]
+1
+[Phone #]
+a
+
+(> c <)
+[Address]
+c
+[Birth Year]
+3
+[Phone #]
+c
+
+(> b <)
+[Address]
+b
+[Birth Year]
+2
+[Phone #]
+b
+
+(> a <)
+[Address]
+a
+[Birth Year]
+1
+[Phone #]
+a
+
+---------------------------------------------------------------------------
+[Press enter to return to the main menu...]--------------------------------
+: 
+
+---------------------------------------------------------------------------
+[AddressBook] version 2.0
+
+
+
+        (1) Add a Contact
+        (2) Delete a Contact
+        (3) Edit a Contact
+        (4) View a Contact's Info
+        (5) List All Contacts
+        (6) Reverse Contact List
+        (7) Exit
+
+Select any one of the options above by entering the number next to it.
+: 7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Saving contacts to save.txt...
+Save complete.
+bash-3.2$ pwd
+/home/c/chun808/ICS212/Project 2
+bash-3.2$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

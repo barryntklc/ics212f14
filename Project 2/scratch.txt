@@ -1,0 +1,105 @@
+/******************************************************************************************
+*
+* Function name:   getint
+*
+* DESCRIPTION:
+*
+* Parameters:
+*
+* Return values:
+*
+*****************************************************************************************/
+
+//REDO to use cin instead
+
+/*
+int getint(std::string msg, int usage)
+{
+std::string input;
+int returnval = 0;
+
+int exit_status = false;
+
+while (exit_status == false)
+{
+std::cout << msg;
+std::getline(std::cin, input);
+
+try {
+returnval = std::stoi(input);
+exit_status = true;
+} catch (...) {
+if (usage == 0)
+{
+std::cout << "[ERROR]: Please enter a valid number.";
+}
+else if (usage == 1)
+{
+if (input == "")
+{
+print_menu("");
+}
+else
+{
+print_menu("[ERROR]: Please enter a valid number.");
+}
+}
+}
+}
+
+return returnval;
+}
+*/
+
+
+
+
+//create a buffer
+//feed the records into it in reverse
+//return the buffer
+
+//TODO COMPLETE
+
+//record * current;
+
+//get a record pointer buffer and line things up in reverse
+
+//probably uses recursion
+
+//if current is null
+//do nothing
+//else if next is null
+//start = current
+//else if there is a next node
+//set previous
+//move current next to previous
+
+//if (current->next != 0)
+//{
+//    reverse();
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+#ifdef DEBUG
+std::cout << "\n";
+std::cout << "[DEBUG]  called\n";
+std::cout << "" << << "\n";
+std::cout << "\n";
+#endif
+
+
+
+catch (std::out_of_range e)
+{
+std::cout << "Error reading file. Save data could not be recovered." << '\n';
+}

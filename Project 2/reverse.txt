@@ -1,0 +1,19 @@
+
+reverse(start)
+{
+
+    record * previous = 0;
+
+record * previous = 0;
+
+    if (start->next == 0) //if the next node is null
+    {
+        return start;
+    }
+    else //
+    {
+        previous = reverse(start);
+
+
+    }
+}
